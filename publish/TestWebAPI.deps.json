@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "895729aef8e9af102fa2f11f76cda9a369ece820"
+    "signature": "1691cd8b1aa542c4bd7573f5e3a9caf4cf6f5bbe"
   },
   "compilationOptions": {
     "defines": [
@@ -16,6 +16,8 @@
     ".NETCoreApp,Version=v1.1": {
       "TestWebAPI/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.1.0",
+          "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0",
           "Microsoft.NETCore.App": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "1.1.0",
           "Microsoft.AspNetCore.Routing": "1.1.0",
@@ -28,13 +30,56 @@
           "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
+          "AWSSDK.DynamoDBv2": "3.2.8-rc"
         },
         "runtime": {
           "TestWebAPI.dll": {}
         },
         "compile": {
           "TestWebAPI.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.2.8-rc": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Console": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tools": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Net.Requests": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Security.Cryptography.Csp": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Xml.XDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.Core.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.2.8-rc": {
+        "dependencies": {
+          "AWSSDK.Core": "3.2.8-rc"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.DynamoDBv2.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/AWSSDK.DynamoDBv2.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/1.1.0": {
@@ -756,6 +801,18 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.UserSecrets/1.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/1.1.0": {
@@ -2504,6 +2561,9 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0"
         },
+        "compile": {
+          "ref/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
+        },
         "compileOnly": true
       },
       "System.Security.Cryptography.Encoding/4.3.0": {
@@ -2872,6 +2932,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AWSSDK.Core/3.2.8-rc": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y9kE82hzjrFrmpdVXrMziUhi7sgMPcya4eocf/Xr17k1cBH5kCB02dwSp83G3Yyc75M6pBgg07MIXY3zg+MklA=="
+    },
+    "AWSSDK.DynamoDBv2/3.2.8-rc": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a0WUdFvwbYeOhZLujZf7bQKOKYJ1GbhyCKs6UGtpb/4j0Jz3k48MR7Hum4dc0nyW1h7uqltRyiAYBA4a3Y/SPw=="
+    },
     "Microsoft.AspNetCore.Antiforgery/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -3111,6 +3181,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-QmHQbrOoVxXblM2x9NzGPbX3XpQGTCXiO6jZghx4KqUxPfJMS0VgBlgOUnLAz7sJyx3GvhUG6SEX6Xz70dpwDw=="
+    },
+    "Microsoft.Extensions.Configuration.UserSecrets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dwnc4zAXjdh+j/T08UXwhfobzQms3Ta0j3mCGOavRsbO5f2PA929kfQTjaMxPDdFZ6MFP0eeEjgPorf3tpTqVw=="
     },
     "Microsoft.Extensions.DependencyInjection/1.1.0": {
       "type": "package",
